@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SITConnect", "SITConnect\SITConnect.csproj", "{94140B7B-190E-4083-B165-44276B1C981B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BCCD4464-E102-4482-9005-2CEC809276FA} = {BCCD4464-E102-4482-9005-2CEC809276FA}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBService1", "DBService\DBService1.csproj", "{BCCD4464-E102-4482-9005-2CEC809276FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94140B7B-190E-4083-B165-44276B1C981B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94140B7B-190E-4083-B165-44276B1C981B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94140B7B-190E-4083-B165-44276B1C981B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94140B7B-190E-4083-B165-44276B1C981B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCCD4464-E102-4482-9005-2CEC809276FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCCD4464-E102-4482-9005-2CEC809276FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCCD4464-E102-4482-9005-2CEC809276FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCCD4464-E102-4482-9005-2CEC809276FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37387A74-014A-4F36-9B1D-E12FB6C8B680}
+	EndGlobalSection
+EndGlobal

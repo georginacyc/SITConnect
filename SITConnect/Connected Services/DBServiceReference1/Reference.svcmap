@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d884a9b6-972b-42cc-a9c9-a9049b3fcb36" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="d95193ed-0927-422b-9ae7-c68060c694dc" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3c83f76f-240d-4886-99b2-6b56dd268c5e" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="158ca065-e26a-4fee-a1a9-ae3a818d2975" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+    <MetadataFile FileName="DBService1.xsd" MetadataType="Schema" ID="1fa631fc-f099-4535-a2e2-b2dfb3bf0b7c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+    <MetadataFile FileName="SITConnect.Entity.xsd" MetadataType="Schema" ID="7ceb92e8-ff4c-48c3-839b-7c572f2e6eeb" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+    <MetadataFile FileName="DBService1.Entity.xsd" MetadataType="Schema" ID="bc5920a9-af3d-4cfd-8b86-eaf8e17b74e1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/DBService1/Service1/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
