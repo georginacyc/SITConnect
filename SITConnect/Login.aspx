@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SITConnect.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcDuj4aAAAAAMUNeIeTegrLjoj6YRcUV1facALZ"></script>
+    <script src="<%= sourcekey %>" ></script>
     <h2>Login</h2>
 <p>
     <table style="width:100%;">
@@ -33,7 +33,7 @@
 </p>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6LcDuj4aAAAAAMUNeIeTegrLjoj6YRcUV1facALZ', { action: 'Login' }).then(function (token) {
+                grecaptcha.execute('<%= sitekey %>', { action: 'Login' }).then(function (token) {
                 document.getElementById("g-recaptcha-response").value = token
             });
         });

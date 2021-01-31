@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="SITConnect.Registration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcDuj4aAAAAAMUNeIeTegrLjoj6YRcUV1facALZ"></script>
+    <script src="<%= sourcekey %>" ></script>    
     <h2><strong>Registration</strong></h2>
     <h4><strong>Your Personal Info</strong></h4>
     <table style="width:100%;">
@@ -234,7 +234,7 @@
         }
 
         grecaptcha.ready(function () {
-            grecaptcha.execute('6LcDuj4aAAAAAMUNeIeTegrLjoj6YRcUV1facALZ', { action: 'Login' }).then(function (token) {
+            grecaptcha.execute('<%= sitekey %>', { action: 'Login' }).then(function (token) {
                 document.getElementById("g-recaptcha-response").value = token
             });
         });

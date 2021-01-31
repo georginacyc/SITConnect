@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -13,7 +14,23 @@ namespace SITConnect
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        protected string sourcekey { 
+            get {
+                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
+                return @"https://www.google.com/recaptcha/api.js?render=" + sr.ReadToEnd();
+            } 
+        }
+
+        protected string sitekey
+        {
+            get
+            {
+                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
+                return sr.ReadToEnd();
+            }
         }
 
         protected void login_btn_Click(object sender, EventArgs e)

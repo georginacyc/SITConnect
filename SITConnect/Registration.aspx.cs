@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Serialization;
 using System.Text.RegularExpressions;
+using System.IO;
 
 namespace SITConnect
 {
@@ -19,6 +20,24 @@ namespace SITConnect
             pw2_tb.Attributes.Add("onkeyup", "pwdMatcher();");
             expiry_cc.Attributes.Add("onkeyup", "expiryFormatter();");
             cardno_cc.Attributes.Add("onkeyup", "cardFormatter();");
+        }
+
+        protected string sourcekey
+        {
+            get
+            {
+                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
+                return @"https://www.google.com/recaptcha/api.js?render=" + sr.ReadToEnd();
+            }
+        }
+
+        protected string sitekey
+        {
+            get
+            {
+                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
+                return sr.ReadToEnd();
+            }
         }
 
         protected void register_btn_Click(object sender, EventArgs e)
