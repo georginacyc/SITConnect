@@ -22,24 +22,6 @@ namespace SITConnect
             cardno_cc.Attributes.Add("onkeyup", "cardFormatter();");
         }
 
-        protected string sourcekey
-        {
-            get
-            {
-                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
-                return @"https://www.google.com/recaptcha/api.js?render=" + sr.ReadToEnd();
-            }
-        }
-
-        protected string sitekey
-        {
-            get
-            {
-                StreamReader sr = File.OpenText(Server.MapPath("sitekey.txt"));
-                return sr.ReadToEnd();
-            }
-        }
-
         protected void register_btn_Click(object sender, EventArgs e)
         {
             error2_lb.Text = "";

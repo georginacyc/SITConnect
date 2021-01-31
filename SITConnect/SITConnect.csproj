@@ -190,6 +190,7 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="secretkey.txt" />
     <Content Include="Site.Master" />
     <Content Include="sitekey.txt" />
     <Content Include="ViewSwitcher.ascx" />

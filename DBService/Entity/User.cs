@@ -195,35 +195,61 @@ namespace DBService1.Entity
         {
             User user = new User().SelectByEmail(email);
             
-            int span = Convert.ToInt16(DateTime.Now.Subtract(Convert.ToDateTime(user.Suspended_Since)).TotalMinutes);
-            if (span < 30)
+            if (user.Suspended_Since != null)
             {
-                return true;
+                int span = Convert.ToInt16(DateTime.Now.Subtract(Convert.ToDateTime(user.Suspended_Since)).TotalMinutes);
+                if (span < 30)
+                {
+                    return true;
+                } else
+                {
+                    if (user.Attempts_Left == 0)
+                    {
+
+                        string connStr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+
+                        SqlConnection conn = new SqlConnection(connStr);
+
+                        string query = "UPDATE Account SET attempts_left = @attempts_left WHERE email = @email";
+                        SqlCommand cmd = new SqlCommand(query, conn);
+
+                        cmd.Parameters.AddWithValue("@attempts_left", 3);
+                        cmd.Parameters.AddWithValue("@email", user.Email);
+
+                        //System.Diagnostics.Debug.WriteLine("attempts reset to 3 a ");
+
+
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        return false;
+                    }
+                    return false;
+                }
             } else
             {
                 if (user.Attempts_Left == 0)
                 {
-
                     string connStr = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
 
                     SqlConnection conn = new SqlConnection(connStr);
 
-                    string query = "UPDATE Account SET attempts_left = @attempts_left WHERE email = @email";
+                    string query = "UPDATE Account SET attempts_left = @attempts_left, suspended_since = @since WHERE email = @email";
                     SqlCommand cmd = new SqlCommand(query, conn);
 
-                    cmd.Parameters.AddWithValue("@attempts_left", 3);
+                    cmd.Parameters.AddWithValue("@attempts_left", 0);
+                    cmd.Parameters.AddWithValue("@since", DateTime.Now);
                     cmd.Parameters.AddWithValue("@email", user.Email);
-
-                    //System.Diagnostics.Debug.WriteLine("attempts reset to 3 a ");
-
 
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
-                    return false;
+                    //System.Diagnostics.Debug.WriteLine("suspended");
+                    return true;
                 }
                 return false;
             }
+            
         }
 
         public bool CheckAttempts(string email, bool pass) // true == attempt passed, false == attempt failed
