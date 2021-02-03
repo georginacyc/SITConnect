@@ -101,7 +101,7 @@ namespace SITConnect
                 hashednew = Convert.ToBase64String(hashing.ComputeHash(Encoding.UTF8.GetBytes(saltednew)));
                 if (hashednew == user.Password || hashednew == user.Password_Last1 || hashednew == user.Password_Last2)
                 {
-                    error_lb.Text = error_lb.Text + "New password cannot be the same as current or previous 2 new passwords <br>";
+                    error_lb.Text = error_lb.Text + "New password cannot be the same as current or previous 2 passwords <br>";
                     pass = false;
                 }
 
