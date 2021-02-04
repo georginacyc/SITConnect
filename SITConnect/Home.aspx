@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="SITConnect.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><strong>Registration</strong></h2>
+    <h2><strong>Your Profile</strong></h2>
     <h4><strong>Your Personal Info</strong></h4>
     <table style="width:100%;">
         <tr>
